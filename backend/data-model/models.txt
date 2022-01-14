@@ -1,0 +1,56 @@
+Model Investment{
+close_price integer,
+close_price_as_of: date,
+cusip: string,
+id: string,
+institution_id: string,
+institution_security_id: string,
+is_cash_equivalent: false
+isin: "US2586201038"
+iso_currency_code: string,
+name: string,
+proxy_security_id: null
+security_id: string,
+sedol: string,
+ticker_symbol:string,
+type: string,
+unofficial_currency_code: string,
+user_id: integer,
+}
+Model Transaction{
+account_id: string,
+account_owner: null
+amount: 25
+authorized_date: string,
+authorized_datetime: null
+category: array
+category_id: string,
+check_number: null
+date: "2022-01-05"
+datetime: null
+id: string,
+iso_currency_code: string,
+location: {address: null, city: null, country: null, lat: null, lon: null, …}
+merchant_name: null
+name: string,
+payment_channel: string,
+payment_meta: string,
+pending: false
+pending_transaction_id: string,
+personal_finance_category: string,
+transaction_code: string,
+transaction_id: string,
+transaction_type: "special"
+unofficial_currency_code: string,
+user_id: 1
+}
+Model Trashed_Transaction{
+    id:string,
+    user_id:string,
+    transaction_id:string
+}
+Model Trashed_Investment{
+    id:string,
+    user_id:string,
+    transaction_id:string
+}
